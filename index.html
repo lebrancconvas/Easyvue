@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Test Anything</title>
+    <link rel="stylesheet" href="bulma.css"></link>
+  </head>
+  <body>
+    <div id="app-vue">
+      <h1>{{name}}</h1>
+      <h1>{{age}}</h1>
+      <div>
+        <button v-on:click="addAg" class="button is-orimary">เพิ่มอายุ</button>
+        <button v-on:click="decAg" class="button is-link">ลดอายุ</button>
+      </div>
+      <div v-if="age < 0">
+        <h2>อายุแบบนั้นเลยเหรอเนี่ย</h2>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
