@@ -1,17 +1,18 @@
 new Vue ({
   el:"#app-vue",
   data:{
-    name: "แมวน้ำ",
-    age: 20,
-    type: "สัตว์น้ำ",
-    food: "แซลมอน"
+    name: "Spiderman",
+    point: 20,
+    type: "Superhero",
+    food: "แซลมอน",
+    img: "./statics/img/spiderlogo.jpg"
   },
   methods:{
     addAg: function(){
-      this.age++;
+      this.point++;
     },
     decAg: function(){
-      this.age--;
+      this.point--;
     }
   }
 })
