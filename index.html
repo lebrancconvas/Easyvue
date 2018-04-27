@@ -2,21 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <title>Test Anything</title>
-    <link rel="stylesheet" href="bulma.css"></link>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="app-vue">
-      <h1>{{name}}</h1>
-      <h1>{{age}}</h1>
-      <div>
-        <button v-on:click="addAg" class="button is-orimary">เพิ่มอายุ</button>
-        <button v-on:click="decAg" class="button is-link">ลดอายุ</button>
-      </div>
-      <div v-if="age < 0">
-        <h2>อายุแบบนั้นเลยเหรอเนี่ย</h2>
-      </div>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          <ul>
+        </nav>
+      </header>
+      <img src="./statics/img/spiderlogo.jpg">
+        <h1>Name : {{name}}</h1>
+        <h1>Point : {{point}}</h1>
+        <div class="forfunc">
+          <button v-on:click="addAg">เพิ่มอายุ</button>
+          <button v-on:click="decAg">ลดอายุ</button>
+        </div>
+        <div class="status">
+          <h2>Status: </h2>
+          <div v-if="point < 0">
+            Point ของคุณอยู่ในขั้นวิกฤต
+          </div>
+        </div>
     </div>
     <script src="app.js"></script>
   </body>
